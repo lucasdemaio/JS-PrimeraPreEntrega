@@ -22,7 +22,7 @@ function promocion(total){
 };
 
 
-let entrada = prompt("Escriba que producto desea: Asado, Vacio, Cerdo, Chorizo, Achuras. O Ingrese SALIR para finalizar").toLowerCase();
+let entrada = prompt("Escriba que producto desea: \n Asado, Vacio, Cerdo, Chorizo, Achuras. \n \n O Ingrese SALIR para finalizar").toLowerCase();
 
 while (entrada != "salir") {
     switch (entrada) {
@@ -32,7 +32,7 @@ while (entrada != "salir") {
             break;
         case "vacio":
             pedidoVacio = Number(prompt("Cuantos Kg de Vacio quiere comprar?"));
-            alert(`Ha elegido comprar ${pedidoAsado}kg de Vacio`);
+            alert(`Ha elegido comprar ${pedidoVacio}kg de Vacio`);
             break;
         case "cerdo":
             pedidoCerdo = Number(prompt("Cuantos Kg de Cerdo quiere comprar?"));
@@ -50,7 +50,7 @@ while (entrada != "salir") {
             alert("Debe ingresar uno de los productos disponibles");
             break;
     }
-    entrada = prompt("Escriba que producto desea: ASADO, VACIO, CERDO, CHORIZO, ACHURAS. O Ingrese SALIR para finalizar").toLowerCase();
+    entrada = prompt("Escriba que producto desea: \n Asado, Vacio, Cerdo, Chorizo, Achuras. \n \n O Ingrese SALIR para finalizar").toLowerCase();
 };
 
 if (pedidoAsado === null || pedidoAsado === undefined || pedidoAsado === '') 
@@ -76,24 +76,16 @@ if (total > 15000){
     let totalConDescuento = promocion(total);
 
     alert(`Su resumen de compra es:
-    Asado ${pedidoAsado}kg
-    Vacio ${pedidoVacio}kg
-    Cerdo ${pedidoCerdo}kg
-    Chorizo ${pedidoChorizo}kg
-    Achuras ${pedidoAchuras}kg
-    El total es de $${total}, con descuento por superar los $15000 es de $${totalConDescuento}`);
+    \nAsado ${pedidoAsado}kg \nVacio ${pedidoVacio}kg \nCerdo ${pedidoCerdo}kg \nChorizo ${pedidoChorizo}kg \nAchuras ${pedidoAchuras}kg
+    \n\nEl total es de $${total}, \ncon descuento por superar los $15000 es de $${totalConDescuento}`);
 } 
 else if (total === 0) {
     alert("No ha realizado ninguna compra")
 } 
 else{
     alert(`Su resumen de compra es:
-    Asado ${pedidoAsado}kg
-    Vacio ${pedidoVacio}kg
-    Cerdo ${pedidoCerdo}kg
-    Chorizo ${pedidoChorizo}kg
-    Achuras ${pedidoAchuras}kg  
-    
-    El total a pagar es de $${total}`)
+    \nAsado ${pedidoAsado}kg \nVacio ${pedidoVacio}kg \nCerdo ${pedidoCerdo}kg \nChorizo ${pedidoChorizo}kg \nAchuras ${pedidoAchuras}kg
+    \n\nEl total a pagar es de $${total}`)
 };
+
 
