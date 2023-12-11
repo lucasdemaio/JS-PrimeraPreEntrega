@@ -85,9 +85,7 @@ while (entrada != "salir") {
     entrada = prompt("Escriba que producto desea agregar o modificar: \n Asado, Vacio, Cerdo, Chorizo, Achuras. \n \n O Ingrese SALIR para finalizar").toLowerCase();
 };
 
-
-//Declaro variable para suma de los pedidos
-
+// declaro variable para suma de los totales
 let total = suma(totalPedidoAsado, totalPedidoVacio, totalPedidoChorizo, totalPedidoCerdo, totalPedidoAchuras);
 
 //Verifica si aplica descuento, detalla la compra, e importes
