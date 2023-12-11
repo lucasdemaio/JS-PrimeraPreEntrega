@@ -8,15 +8,15 @@ const precioKgChorizo = 2500
 const precioKgAchuras = 4500
 const descuento = 0.80
 let pedidoAsado
-let totalPedidoAsado
+let totalPedidoAsado = 0
 let pedidoVacio
-let totalPedidoVacio
+let totalPedidoVacio = 0
 let pedidoCerdo
-let totalPedidoCerdo
+let totalPedidoCerdo = 0
 let pedidoChorizo
-let totalPedidoChorizo
+let totalPedidoChorizo = 0
 let pedidoAchuras
-let totalPedidoAchuras
+let totalPedidoAchuras = 0
 
 //FUNCIONES
 
@@ -37,63 +37,59 @@ while (entrada != "salir") {
     switch (entrada) {
         case "asado":
             pedidoAsado = Number(prompt("Cuantos Kg de Asado quiere comprar?"));
-                if (totalPedidoAsado === null || totalPedidoAsado === undefined || totalPedidoAsado === '')
-                totalPedidoAsado = 0
+            while (isNaN(pedidoAsado)) {
+                alert("Debe ingresar los kg en numeros")
+                pedidoAsado = totalPedidoAsado
+                pedidoAsado = Number(prompt("Cuantos Kg de Asado quiere comprar?"))}
             totalPedidoAsado = totalPedidoAsado + pedidoAsado
-            alert(`Ha elegido comprar ${totalPedidoAsado}kg de Asado`);
+            alert(`Ha elegido comprar ${totalPedidoAsado}kg de Asado`);    
             break;
+
         case "vacio":
             pedidoVacio = Number(prompt("Cuantos Kg de Vacio quiere comprar?"));
-                if (totalPedidoVacio === null || totalPedidoVacio === undefined || totalPedidoVacio === '')
-                totalPedidoVacio = 0
+            while (isNaN(pedidoVacio)) {
+                alert("Debe ingresar los kg en numeros")
+                pedidoVacio = totalPedidoVacio
+                pedidoVacio = Number(prompt("Cuantos Kg de Vacio quiere comprar?"))}
             totalPedidoVacio = totalPedidoVacio + pedidoVacio
-            alert(`Ha elegido comprar ${totalPedidoVacio}kg de Vacio`);
+            alert(`Ha elegido comprar ${totalPedidoVacio}kg de Vacio`);    
             break;
+
         case "cerdo":
             pedidoCerdo = Number(prompt("Cuantos Kg de Cerdo quiere comprar?"));
-                if (totalPedidoCerdo === null || totalPedidoCerdo === undefined || totalPedidoCerdo === '')
-                totalPedidoCerdo = 0
-            totalPedidoCerdo = totalPedidoCerdo + pedidoCerdo
-            alert(`Ha elegido comprar ${totalPedidoCerdo}kg de Cerdo`);
+            while (isNaN(pedidoCerdo)) {
+                alert("Debe ingresar los kg en numeros")
+                pedidoCerdo = totalPedidoCerdo
+                pedidoCerdo = Number(prompt("Cuantos Kg de Cerdo quiere comprar?"))}
+                totalPedidoCerdo = totalPedidoCerdo + pedidoCerdo
+            alert(`Ha elegido comprar ${totalPedidoCerdo}kg de Cerdo`);    
             break;
+
         case "chorizo":
             pedidoChorizo = Number(prompt("Cuantos Kg de Chorizo quiere comprar?"));
-            if (totalPedidoChorizo === null || totalPedidoChorizo === undefined || totalPedidoChorizo === '')
-                totalPedidoChorizo = 0
-            totalPedidoChorizo = totalPedidoChorizo + pedidoChorizo
-        alert(`Ha elegido comprar ${totalPedidoChorizo}kg de Chorizo`);
-        break;
-        case "achuras":
-            pedidoAchuras = Number(prompt("Cuantos Kg de Chorizo quiere comprar?"));
-            if (totalPedidoAchuras === null || totalPedidoAchuras === undefined || totalPedidoAchuras === '')
-                totalPedidoAchuras = 0
-            totalPedidoAchuras = totalPedidoAchuras + pedidoAchuras
-        alert(`Ha elegido comprar ${totalPedidoAchuras}kg de Achuras`);
-        break;
-        default:
-            alert("Debe ingresar uno de los productos disponibles");
+            while (isNaN(pedidoChorizo)) {
+                alert("Debe ingresar los kg en numeros")
+                pedidoChorizo = totalPedidoChorizo
+                pedidoChorizo = Number(prompt("Cuantos Kg de Chorizo quiere comprar?"))}
+                totalPedidoChorizo = totalPedidoChorizo + pedidoChorizo
+            alert(`Ha elegido comprar ${totalPedidoChorizo}kg de Chorizo`);    
             break;
+
+        case "achuras":
+            pedidoAchuras = Number(prompt("Cuantos Kg de Achuras quiere comprar?"));
+            while (isNaN(pedidoAchuras)) {
+                alert("Debe ingresar los kg en numeros")
+                pedidoAchuras = totalPedidoAchuras
+                pedidoAchuras = Number(prompt("Cuantos Kg de Achuras quiere comprar?"))}
+                totalPedidoAchuras = totalPedidoAchuras + pedidoAchuras
+            alert(`Ha elegido comprar ${totalPedidoAchuras}kg de Achuras`);    
+            break;
+        default:
+            alert("Debe escribir algunos de los productos listado")
     }
     entrada = prompt("Escriba que producto desea agregar o modificar: \n Asado, Vacio, Cerdo, Chorizo, Achuras. \n \n O Ingrese SALIR para finalizar").toLowerCase();
 };
 
-//PARA EVITAR BUG, En caso que no haya ingresado productos asigna el valor 0
-
-if (totalPedidoAsado === null || totalPedidoAsado === undefined || totalPedidoAsado === '') 
-    totalPedidoAsado = 0
-
-if (totalPedidoVacio === null || totalPedidoVacio === undefined || totalPedidoVacio === '')
-    totalPedidoVacio = 0
-
-if (totalPedidoCerdo === null || totalPedidoCerdo === undefined || totalPedidoCerdo === '')
-    totalPedidoCerdo = 0
-
-if (totalPedidoChorizo === null || totalPedidoChorizo === undefined || totalPedidoChorizo === '')
-    totalPedidoChorizo = 0
-
-if (totalPedidoAchuras === null || totalPedidoAchuras === undefined || totalPedidoAchuras === '')
-    totalPedidoAchuras = 0
-;
 
 //Declaro variable para suma de los pedidos
 
@@ -116,4 +112,3 @@ else{
     \nAsado ${totalPedidoAsado}kg \nVacio ${totalPedidoVacio}kg \nCerdo ${totalPedidoCerdo}kg \nChorizo ${totalPedidoChorizo}kg \nAchuras ${totalPedidoAchuras}kg
     \n\nEl total a pagar es de $${total}`)
 };
-
