@@ -29,7 +29,7 @@ function promocion(total){
 };
 
 
-//
+// Entrada de datos del usuario con validaciones
 
 let entrada = prompt("Escriba que producto desea: \n Asado, Vacio, Cerdo, Chorizo, Achuras. \n \n O Ingrese SALIR para finalizar").toLowerCase();
 
@@ -39,7 +39,6 @@ while (entrada != "salir") {
             pedidoAsado = Number(prompt("Cuantos Kg de Asado quiere comprar?"));
             while (isNaN(pedidoAsado)) {
                 alert("Debe ingresar los kg en numeros")
-                pedidoAsado = totalPedidoAsado
                 pedidoAsado = Number(prompt("Cuantos Kg de Asado quiere comprar?"))}
             totalPedidoAsado = totalPedidoAsado + pedidoAsado
             alert(`Ha elegido comprar ${totalPedidoAsado}kg de Asado`);    
@@ -49,7 +48,6 @@ while (entrada != "salir") {
             pedidoVacio = Number(prompt("Cuantos Kg de Vacio quiere comprar?"));
             while (isNaN(pedidoVacio)) {
                 alert("Debe ingresar los kg en numeros")
-                pedidoVacio = totalPedidoVacio
                 pedidoVacio = Number(prompt("Cuantos Kg de Vacio quiere comprar?"))}
             totalPedidoVacio = totalPedidoVacio + pedidoVacio
             alert(`Ha elegido comprar ${totalPedidoVacio}kg de Vacio`);    
@@ -59,7 +57,6 @@ while (entrada != "salir") {
             pedidoCerdo = Number(prompt("Cuantos Kg de Cerdo quiere comprar?"));
             while (isNaN(pedidoCerdo)) {
                 alert("Debe ingresar los kg en numeros")
-                pedidoCerdo = totalPedidoCerdo
                 pedidoCerdo = Number(prompt("Cuantos Kg de Cerdo quiere comprar?"))}
                 totalPedidoCerdo = totalPedidoCerdo + pedidoCerdo
             alert(`Ha elegido comprar ${totalPedidoCerdo}kg de Cerdo`);    
@@ -69,7 +66,6 @@ while (entrada != "salir") {
             pedidoChorizo = Number(prompt("Cuantos Kg de Chorizo quiere comprar?"));
             while (isNaN(pedidoChorizo)) {
                 alert("Debe ingresar los kg en numeros")
-                pedidoChorizo = totalPedidoChorizo
                 pedidoChorizo = Number(prompt("Cuantos Kg de Chorizo quiere comprar?"))}
                 totalPedidoChorizo = totalPedidoChorizo + pedidoChorizo
             alert(`Ha elegido comprar ${totalPedidoChorizo}kg de Chorizo`);    
@@ -79,7 +75,6 @@ while (entrada != "salir") {
             pedidoAchuras = Number(prompt("Cuantos Kg de Achuras quiere comprar?"));
             while (isNaN(pedidoAchuras)) {
                 alert("Debe ingresar los kg en numeros")
-                pedidoAchuras = totalPedidoAchuras
                 pedidoAchuras = Number(prompt("Cuantos Kg de Achuras quiere comprar?"))}
                 totalPedidoAchuras = totalPedidoAchuras + pedidoAchuras
             alert(`Ha elegido comprar ${totalPedidoAchuras}kg de Achuras`);    
